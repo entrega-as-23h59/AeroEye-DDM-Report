@@ -1,33 +1,32 @@
-
 \documentclass[a4paper,12pt]{article}
 
-% --- Codificação e idioma ---
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[portuguese]{babel}
 
-% --- Formatação ---
-\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=2.5cm,right=2.5cm]{geometry}
 \usepackage{lmodern}
 \usepackage{microtype}
 \usepackage{setspace}
 \usepackage{parskip}
-
-% --- Links ---
 \usepackage[hidelinks]{hyperref}
-
-% --- Dados do documento ---
-\title{ AeroEye}
-\author{
-    Daniel Santana, Gabriel Bernardes, Reiben Alves \\
-    \small Desenvolvimento de Dispositivos Móveis \\
-    \small Universidade de Leiria
-}
-\date{}
+\usepackage{graphicx}
+\usepackage{float}
 
 \begin{document}
 
-\maketitle
+\thispagestyle{empty}
+
+\begin{center}
+    {\large\bfseries AeroEye}\\[0.15cm]
+    {\small
+        Daniel Santana, Gabriel Bernardes, Rúben Alves\\
+        Desenvolvimento de Dispositivos Móveis\\
+        Universidade de Leiria e Oeste
+    }
+\end{center}
+
+\vspace{-0.3cm}
 
 \section{Contextualização do projeto}
 
@@ -36,11 +35,24 @@ O AeroEye consiste num sistema de monitorização de maquinaria industrial basea
 O projeto pretende reduzir os custos operacionais e as paragens de produção, evitando deslocações desnecessárias de técnicos externos quando o problema não é de dificil resolução e permitindo que os operadores resolvam determinados problemas mais rapidamente com as devidas instruções.
 
 \section{Desenvolvimento no âmbito de DDM}
-No âmbito da unidade curricular de Desenvolvimento de Dispositivos Móveis, será desenvolvida uma aplicação nativa para IoS, integrada no sistema AeroEye. A aplicação permitirá consultar relatórios e vídeos, bem como visualizar, em tempo real, as imagens das câmaras e os dados recolhidos pelos sensores do drone. Adicionalmente, incluirá a funcionalidade de Realidade Aumentada que permitirá aos operadores consultar, junto da máquina identificada com uma anomalia, as instruções deixadas remotamente pelo técnico, auxiliando a resolução do problema sem necessidade de deslocação deste à fábrica.
+No âmbito da unidade curricular de Desenvolvimento de Dispositivos Móveis, será desenvolvida uma aplicação nativa para iOS, integrada no sistema AeroEye. A aplicação permitirá consultar relatórios e vídeos, bem como visualizar, em tempo real, as imagens das câmaras e os dados recolhidos pelos sensores do drone. Adicionalmente, incluirá a funcionalidade de Realidade Aumentada que permitirá aos operadores consultar, junto da máquina identificada com uma anomalia, as instruções deixadas remotamente pelo técnico, auxiliando a resolução do problema sem necessidade de deslocação deste à fábrica. \\
+Para a gestão do acesso remoto através de óculos de VR (cujo sistema operativo é baseado em Android), o processo de autenticação é efetuado através de uma aplicação nativa desenvolvida em Jetpack Compose. Após a validação bem-sucedida das credenciais do utilizador junto do servidor central, a aplicação inicializa o ambiente imersivo em Unity, transmitindo os \textit{tokens} de sessão necessários para estabelecer as ligações de \textit{streaming} de vídeo e a receção de telemetria.
 
 \section{Tecnologias e Ferramentas}
-A aplicação será desenvolvida nativamente para iOS, utilizando Swift como linguagem de programação e SwiftUI para a implementação da interface. Para as funcionalidades de Realidade Aumentada, será utilizada a framework ARKit, permitindo visualizar as instruções de manutenção junto das máquinas. A comunicação com o servidor central será realizada através de uma API, possibilitando o acesso a relatórios, vídeos, dados dos sensores e anotações do sistema AeroEye. O desenvolvimento será realizado numa máquina virtual com macOS, executada sobre o sistema operativo do computador de trabalho, seja Linux ou Windows.
+A aplicação será desenvolvida nativamente para iOS, utilizando Swift como linguagem de programação e SwiftUI para a implementação da interface. Para as funcionalidades de Realidade Aumentada, será utilizada a framework ARKit, permitindo visualizar as instruções de manutenção junto das máquinas. A comunicação com o servidor central será realizada através de uma API e WebSockets, possibilitando o acesso a relatórios, vídeos, dados dos sensores e anotações do sistema AeroEye. O desenvolvimento será realizado numa máquina virtual com macOS, executada sobre o sistema operativo do computador de trabalho, seja Linux ou Windows.
 
-% Inserir aqui o texto de contextualização do projeto.
+
+\clearpage 
+
+\section{Mockups}
+A figura seguinte representa um mockup dos 3 ecrãs da interface da aplicação.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{mockup.jpg}
+  \caption{Mockup dos 3 ecrãs da aplicação}
+  \label{fig:mockup}
+\end{figure}
+
 
 \end{document}
