@@ -20,7 +20,8 @@
 \begin{center}
     {\large\bfseries AeroEye}\\[0.15cm]
     {\small
-        Daniel Santana, Gabriel Bernardes, Rúben Alves\\
+        Daniel Santana, Gabriel Bernardes, Rúben Alves \\
+        2231161@ulo.pt, 2231170@ulo.pt, 2231034@ulo.pt \\
         Desenvolvimento de Dispositivos Móveis\\
         Universidade de Leiria e Oeste
     }
@@ -32,10 +33,10 @@
 
 O AeroEye consiste num sistema de monitorização de maquinaria industrial baseado num drone, que recorre a técnicas de Machine Learning para identificar potenciais anomalias e a tecnologias de Realidade Virtual (VR) e Realidade Aumentada (AR) para facilitar o acesso remoto de um técnico especializado à anomalia e fornecer apoio visual à manutenção. 
 
-O projeto pretende reduzir os custos operacionais e as paragens de produção, evitando deslocações desnecessárias de técnicos externos quando o problema não é de dificil resolução e permitindo que os operadores resolvam determinados problemas mais rapidamente com as devidas instruções.
+O projeto pretende reduzir os custos operacionais e as paragens de produção, evitando deslocações desnecessárias de técnicos externos quando o problema não é de difícil resolução e permitindo que os operadores resolvam determinados problemas mais rapidamente com as devidas instruções.
 
 \section{Desenvolvimento no âmbito de DDM}
-No âmbito da unidade curricular de Desenvolvimento de Dispositivos Móveis, será desenvolvida uma aplicação nativa para iOS, integrada no sistema AeroEye. A aplicação permitirá consultar relatórios e vídeos, bem como visualizar, em tempo real, as imagens das câmaras e os dados recolhidos pelos sensores do drone. Adicionalmente, incluirá a funcionalidade de Realidade Aumentada que permitirá aos operadores consultar, junto da máquina identificada com uma anomalia, as instruções deixadas remotamente pelo técnico, auxiliando a resolução do problema sem necessidade de deslocação deste à fábrica. \\
+No âmbito da unidade curricular de Desenvolvimento de Dispositivos Móveis, será desenvolvida uma aplicação nativa para iOS, integrada no sistema AeroEye. A aplicação permitirá consultar relatórios e vídeos, bem como visualizar, em tempo real, as imagens das câmaras e os dados recolhidos pelos sensores do drone. Adicionalmente, irá incluir a funcionalidade de Realidade Aumentada que permitirá aos operadores consultar, junto da máquina identificada com uma anomalia, as instruções deixadas remotamente pelo técnico, auxiliando a resolução do problema sem necessidade de deslocação deste à fábrica. \\
 Para a gestão do acesso remoto através de óculos de VR (cujo sistema operativo é baseado em Android), o processo de autenticação é efetuado através de uma aplicação nativa desenvolvida em Jetpack Compose. Após a validação bem-sucedida das credenciais do utilizador junto do servidor central, a aplicação inicializa o ambiente imersivo em Unity, transmitindo os \textit{tokens} de sessão necessários para estabelecer as ligações de \textit{streaming} de vídeo e a receção de telemetria.
 
 \section{Tecnologias e Ferramentas}
